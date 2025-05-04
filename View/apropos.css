@@ -1,0 +1,267 @@
+/* Variables */
+:root {
+    --primary: #14a387;
+    --secondary: #D9C728;
+    --light: #f5f6fa;
+    --dark: #212529;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+/* Text Colors */
+.text-stagik {
+    color: var(--primary);
+}
+
+/* Hero Section - À propos */
+.hero-section {
+    background: 
+        /* Dégradé coloré semi-transparent */
+        linear-gradient(135deg, rgba(20, 163, 135, 0.85) 0%, rgba(217, 199, 40, 0.7) 100%),
+        url('image/apropos.png') no-repeat center center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenu texte */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+/* Team Cards */
+.hover-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hover-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary);
+}
+
+/* Backgrounds */
+.bg-stagik {
+    background-color: var(--primary);
+}
+/* Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Style de la navbar */
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+/* Style des liens dans la navbar */
+.nav-link {
+    color: #333;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Effet sur le texte des liens */
+.nav-text {
+    position: relative;
+}
+
+/* Surlignage au survol */
+.nav-link:hover .nav-text {
+    color: #007bff;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 4px;
+    transform: scale(1.05);
+}
+
+/* Effet de surlignage sous forme de trait sur le texte */
+.nav-text::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #007bff;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+    
+}
+
+.nav-text:hover::after {
+    width: 100%;
+}
+
+/* Surlignage pour le lien actif */
+.nav-link.active .nav-text {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    background-color: #007bff;
+}
+/* Si besoin, ajuste la taille des images pour garantir qu'elles sont à peu près de la même taille */
+.vertical-rectangle {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 20px;
+    height: auto;
+    width: 100%;
+}
+
+/* Si besoin, ajuste la taille des images pour garantir qu'elles sont à peu près de la même taille */
+.profile-img-vertical {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+/* Style pour les noms des membres avec un emoji rose */
+.member-name {
+    font-size: 2.2rem; /* Agrandir le nom */
+    font-weight: 700;  /* Mettre en gras */
+    color: var(--primary); /* Utiliser la couleur principale */
+    margin-bottom: 0.5rem;
+}
+
+/* Style pour le rôle sous le nom */
+.role {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #D9C728; /* Couleur secondaire */
+}
+
+/* Style pour les descriptions avec texte plus grand et plus fluide */
+.description {
+    font-size: 1.2rem;
+    color: #333;  /* Couleur de texte sombre */
+    line-height: 1.6;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+/* Emojis en rose */
+.emoji {
+    font-size: 1.5rem;
+    color: #D5006D; /* Rose */
+}
+
+/* Augmenter la taille de la police du titre "Les Membres de l'Équipe" */
+.text-stagik {
+    font-size: 3rem; /* Agrandir le titre */
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 2px;
+    
+}
+
+/* Style de la section avec des ajustements */
+.vertical-rectangle {
+    background: #e1fff6;
+    border: 2px solid #36998c;
+    border-radius: 20px;
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img-vertical {
+    width: 280px; /* Augmenter la largeur pour une meilleure visibilité */
+    height: 550px; /* Augmenter la hauteur pour rendre l'image plus imposante */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px; /* Espacement sous l'image */
+}
+
+
+.hero-section p {
+    font-family: 'Roboto', sans-serif; /* Police plus douce pour le paragraphe */
+    font-size: 1.75rem; /* Taille du texte un peu plus petite */
+    color: #080202; /* Couleur plus claire pour le texte secondaire */
+    line-height: 1.8; /* Espacement entre les lignes pour une meilleure lisibilité */
+    margin-top: 30px; /* Un peu d'espace entre le titre et le paragraphe */
+}
+.hero-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: #bbb33d;
+    font-weight: bold; /* Mise en gras du titre */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.highlight-text {
+    background-color: rgba(63, 136, 109, 0.952); /* Ajoute un fond clair */
+    padding: 5px; /* Ajoute un petit espace autour du texte */
+    border-radius: 5px; /* Arrondir les bords du fond */
+    font-family: 'Lora', serif; /* Police élégante */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* Ombre portée */
+}
+
+
+
+
+
+

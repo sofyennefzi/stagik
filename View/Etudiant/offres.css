@@ -1,0 +1,350 @@
+/* Variables */
+:root {
+    --primary: #14a387;
+    --primary-hover: #118972;
+    --secondary: #D9C728;
+    --light: #f5f6fa;
+    --dark: #212529;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, rgba(20, 163, 135, 0.1) 0%, rgba(217, 199, 40, 0.1) 100%);
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/offres.png'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+/* Category Cards */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.category-card span {
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Offer Cards */
+.offer-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.offer-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    border-color: var(--primary);
+}
+
+.company-logo {
+    max-height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover .company-logo {
+    transform: scale(1.05);
+}
+
+/* Badges */
+.badge.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(20, 163, 135, 0.1) 0%, rgba(217, 199, 40, 0.1) 100%);
+}
+
+/* CTA Section */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+/* Footer */
+.bg-dark {
+    background-color: var(--dark) !important;
+}
+
+/* Dropdown */
+.dropdown-item:active {
+    background-color: var(--primary);
+}
+
+/* Active nav link */
+.nav-link.active {
+    color: var(--primary) !important;
+}
+/* Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Style de la navbar */
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+/* Style des liens dans la navbar */
+.nav-link {
+    color: #333;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Effet sur le texte des liens */
+.nav-text {
+    position: relative;
+}
+
+/* Surlignage au survol */
+.nav-link:hover .nav-text {
+    color: #007bff;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 4px;
+    transform: scale(1.05);
+}
+
+/* Effet de surlignage sous forme de trait sur le texte */
+.nav-text::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #007bff;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.nav-text:hover::after {
+    width: 100%;
+}
+
+/* Surlignage pour le lien actif */
+.nav-link.active .nav-text {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    background-color: #007bff;
+}
+.hero-section p {
+    font-family: 'Roboto', sans-serif; /* Police plus douce pour le paragraphe */
+    font-size: 1.75rem; /* Taille du texte un peu plus petite */
+    color: #0c816e; /* Couleur plus claire pour le texte secondaire */
+    line-height: 1.8; /* Espacement entre les lignes pour une meilleure lisibilité */
+    margin-top: 30px; /* Un peu d'espace entre le titre et le paragraphe */
+}
+.hero-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: #28806d;
+    font-weight: bold; /* Mise en gras du titre */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.highlight-text {
+    background-color: rgba(218, 204, 82, 0.952); /* Ajoute un fond clair */
+    padding: 5px; /* Ajoute un petit espace autour du texte */
+    border-radius: 5px; /* Arrondir les bords du fond */
+    font-family: 'Lora', serif; /* Police élégante */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* Ombre portée */
+}
+/* Liste des entreprises */
+.list-group-item {
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+.list-group-item h5 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.list-group-item p {
+    font-size: 1rem;
+    color: #666;
+}
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Style de la section avec des ajustements */
+.vertical-rectangle {
+    background: #e1fff6;
+    border: 2px solid #36998c;
+    border-radius: 20px;
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img-vertical {
+    width: 280px; /* Augmenter la largeur pour une meilleure visibilité */
+    height: 550px; /* Augmenter la hauteur pour rendre l'image plus imposante */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px; /* Espacement sous l'image */
+}
+.offers-container {
+    max-width: 1000px; /* limite la largeur de la zone des offres */
+    margin: 0 auto; /* centre la div sur la page */
+    padding: 20px; /* petit espace interne */
+  }
+  
+  .offer-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  
+  .offer-content {
+    padding: 10px 0;
+  }
+  
+  .offer-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28806d;
+  }
+  
+  .offer-company {
+    color: #6c757d;
+    margin-bottom: 10px;
+  }
+  
+  .offer-description {
+    margin-bottom: 10px;
+  }
+  
+  .offer-tags span {
+    margin-right: 10px;
+  }
+  
+  .company-logo {
+    width: 100px;
+    height: auto;
+  }
+  
