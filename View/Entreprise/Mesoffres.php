@@ -43,9 +43,10 @@ $offres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="container py-5">
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="mb-0">📋 Mes Offres de Stage</h2>
-    <a href="ViewAjouterOffre.php" class="btn btn-primary">
-        ➕ Ajouter une offre
-    </a>
+    <a href="ViewAjouterOffre.php" class="btn" style="background-color: #0d6efd; border: 1px solid #0d6efd; color: white;">
+    <i class="bi bi-plus" style="color: white;"></i> Ajouter une offre
+</a>
+
 </div>
 
     <?php if (empty($offres)): ?>

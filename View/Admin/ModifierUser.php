@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $emailExiste = $checkStmt->fetchColumn();
     
         if ($emailExiste > 0) {
-            echo "<div class='alert alert-danger text-center'>❌ Cet email est déjà utilisé par un autre utilisateur.</div>";
+            echo "<div class='alert alert-danger text-center'>Cet email est déjà utilisé par un autre utilisateur.</div>";
             exit;
         }
     
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $emailExiste = $checkStmt->fetchColumn();
 
     if ($emailExiste > 0) {
-        echo "<div class='alert alert-danger text-center'>❌ Cet email est déjà utilisé par un autre utilisateur.</div>";
+        echo "<div class='alert alert-danger text-center'>Cet email est déjà utilisé par un autre utilisateur.</div>";
         exit;
     }
     $user->setTelephone($telephone);
@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
 
               <?php elseif ($user->getRole() === 'entreprise'):
-                $entreprise = Entreprise::where('id_utilisateur', $id)[0]; ?>
+                $entreprise = Entreprise::where('user_id', $id)[0]; ?>
 
                 <!-- Nom entreprise -->
                 <div class="col-12">

@@ -54,7 +54,7 @@ $statut = isset($_GET['statut']) ? htmlspecialchars($_GET['statut']) : "En atten
           <div class="text-center d-flex flex-column gap-3 mt-4">
             <a href="../Acceuil.php" class="btn btn-primary">🏠 Retour à l'accueil</a>
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'etudiant'): ?>
-              <a href="Etudiant/MesPostulations.php" class="btn btn-outline-success">📄 Voir mes postulations</a>
+              <a href="MesPostulations.php" class="btn btn-outline-success">📄 Voir mes postulations</a>
             <?php endif; ?>
           </div>
         </div>

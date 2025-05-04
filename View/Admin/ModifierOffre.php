@@ -86,7 +86,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
               </div>
               <div class="col-12 text-center pt-3">
                 <button type="submit" class="btn btn-success">Enregistrer</button>
-                <a href="ListeOffres.php" class="btn btn-secondary">Retour</a>
               </div>
             </div>
           </form>

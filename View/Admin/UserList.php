@@ -18,13 +18,15 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <title>Liste des utilisateurs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <body>
 <?php include("../Navbar.php"); ?>
 <div class="container py-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="mb-0">👥 Utilisateurs (Étudiants & Entreprises)</h2>
-    <a href="AjouterAdmin.php" class="btn btn-primary">➕ Ajouter un admin</a>
+    <a href="AjouterAdmin.php" class="btn btn-primary"><i class="bi bi-plus" style="color: white;"></i> Ajouter un admin</a>
 </div>
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
